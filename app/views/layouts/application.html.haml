@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    = csrf_meta_tags
+    %title StaticSiteGenerator
+    = stylesheet_link_tag "application"
+  %body
+    = flash_messages
+    = yield
+    = javascript_include_tag "application"
