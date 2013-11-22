@@ -17,7 +17,10 @@ namespace :app do
     pages.each do |route, output|
         puts "Generating #{output}..."
 
-        outpath = File.join ([Rails.root, 'public', output])
+        outpath = File.join([Rails.root, '../', 'build', output])
+        outpath = File.expand_path(outpath)
+
+
         outdir = outpath.split('/')[0..-2].join('/')
         FileUtils::mkdir_p outdir
 
